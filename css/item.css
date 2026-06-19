@@ -1,0 +1,170 @@
+html,body {
+  height: 100%;
+  background: #1e1e1e;
+}
+body {
+  width: 100%;
+}
+
+
+h1 {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+h2 {
+  font-size: 1.125rem;
+  font-weight: bold;
+} 
+
+.pc {
+  display: none;
+}
+
+
+.container {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  flex-direction: column-reverse;
+  position: relative;
+  top: 100px;
+  left: 0;
+  right: 0;
+  z-index: 9;
+}
+
+.split-box {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+.left-box {
+  left: 0;
+  background: whitesmoke;
+}
+.left-box .pc h2{
+  font-size: 1.25rem;
+}
+
+.right-box {
+  right: 0;
+  color: whitesmoke;
+}
+.right-box h2 {
+  font-size: 1.25rem;
+  margin: 5px 0;
+}
+.right-box li {
+  margin-bottom: 10px;
+}
+.right-box li:nth-child(6) {
+  margin-bottom: 0;
+}
+
+.box {
+  padding: 10px;
+}
+.box p {
+  margin-top: 20px;
+}
+.box h2 + span {
+  font-size: 0.875rem;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+
+.features {
+  border-top: 10px solid;
+  border-bottom: 10px solid;
+}
+.specifications dl {
+  margin: 20px 0;
+}
+.specifications .price {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin: 50px 0 5px;
+}
+.specifications .price span {
+  font-size: 0.875rem;
+  vertical-align: bottom;
+}
+.specifications .btn {
+  width: 100%;
+  margin: 0 auto;
+  padding: 30px 0;
+  text-align: center;
+  font-size: 18px;
+  color: whitesmoke;
+  background: gray;
+}
+
+footer {
+  color: whitesmoke;
+  background: #1e1e1e;
+  width: 90%;
+  height: auto;
+  margin: auto;
+  padding: 10px;
+  font-size: 0.8125rem;
+  line-height: 1.75;
+
+  position: relative;
+  bottom: -120px;
+  left: 0;
+
+}
+footer li {
+  line-height: 2;
+}
+footer a {
+  cursor: pointer;
+}
+footer p {
+  font-size: 0.75rem;
+  margin-top: 20px;
+}
+
+
+
+@media (min-width: 600px) {
+  .pc {
+    display: block;
+  }
+  .sp {
+    display: none;
+  }
+  .container {
+    width: 100%;
+    display: block;
+    position: static;
+  }
+  .split-box {
+    position: absolute;
+    top: 50px;
+    z-index: 9;
+    width: 50%;
+    height: 100%;
+  }
+  .left-box {
+    border-top: 10px solid;
+    border-left: 10px solid;
+  }
+  .right-box {
+    padding: 10px 10px 0 10px;
+    overflow-y: scroll;
+  }
+  /* .box {
+    padding: 20px 30px;
+  } */
+  footer {
+    width: 100%;
+    position: absolute;
+    bottom: -250px;
+    left: 0;
+  }
+  footer a {
+    cursor: pointer;
+  }
+}
